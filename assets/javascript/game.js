@@ -15,14 +15,14 @@ function computerGuess() {
 // Call the function for the initial guess
 computerGuess();
 
-// Listen for input and format the case properly, then place into userAllGuess array
-document.onkeyup = function(event) {
+// Listen for input and format the case properly, then push into userAllGuess array
+document.onkeyup = function (event) {
     var userGuess = String.fromCharCode(event.which).toLowerCase();
     userAllGuess.push(userGuess);
     console.log("user guess: " + userGuess);
 
-// Determine if guess matches computer and increment appropriate counter
-// If win, reset the guessRemain counter, clear the userAllGuess array and call the function to generate a new computer guess
+    // Determine if guess matches computer and increment appropriate counter
+    // If win, reset the guessRemain counter, clear the userAllGuess array and call the function to generate a new computer guess
     if (userGuess === compGuess) {
         win++;
         guessRemain = 9;
@@ -30,12 +30,12 @@ document.onkeyup = function(event) {
         computerGuess();
     }
 
-// Let the user keep guessing until no guesses remain
+    // Let the user keep guessing until no guesses remain
     else if (guessRemain > 1) {
         guessRemain--;
     }
 
-// The user loses. Reset the guessRemain counter, clear the userAllGuess array and call the function for a new computer guess
+    // The user loses. Reset the guessRemain counter, clear the userAllGuess array and call the function for a new computer guess
     else {
         loss++;
         guessRemain = 9;
@@ -43,10 +43,10 @@ document.onkeyup = function(event) {
         computerGuess();
     }
 
-// Update results on screen
-document.getElementById("divWin").innerHTML = win;
-document.getElementById("divLoss").innerHTML = loss;
-document.getElementById("divGuessRemain").innerHTML = guessRemain;
-document.getElementById("spanGuessInput").innerHTML = userAllGuess;
+    // Update results on screen
+    document.getElementById("divWin").innerHTML = win;
+    document.getElementById("divLoss").innerHTML = loss;
+    document.getElementById("divGuessRemain").innerHTML = guessRemain;
+    document.getElementById("spanGuessInput").innerHTML = userAllGuess;
 
 };
