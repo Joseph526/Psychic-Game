@@ -10,7 +10,6 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script src="assets/javascript/game.js"></script>
 </head>
 <body>
     <div class="jumbotron">
@@ -27,7 +26,7 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Wins:</h3>
                     </div>
-                    <div class="panel-body">Placeholder text</div>
+                    <div class="panel-body" id="divWin">0</div>
                 </div>
             </div>
             <div class="col-md-3">
@@ -35,7 +34,7 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Losses:</h3>
                     </div>
-                    <div class="panel-body">Placeholder text</div>
+                    <div class="panel-body" id="divLoss">0</div>
                 </div>
             </div>
             <div class="col-md-3">
@@ -43,7 +42,7 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Guesses Left:</h3>
                     </div>
-                    <div class="panel-body">Placeholder text</div>
+                    <div class="panel-body" id="divGuessRemain">9</div>
                 </div>
             </div>
             <div class="col-md-3">
@@ -51,11 +50,12 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Your Guesses So Far:</h3>
                     </div>
-                    <div class="panel-body">Placeholder text</div>
+                    <div class="panel-body"><span id="spanGuessInput">None!</span>&nbsp;</div>
                 </div>
             </div>
         </div>
     </div><!-- /.container-fluid -->
+    <script src="assets/javascript/game.js"></script>
 
 </body>
 </html>
